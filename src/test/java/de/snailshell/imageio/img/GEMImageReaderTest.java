@@ -3,10 +3,10 @@ package de.snailshell.imageio.img;
 import org.junit.jupiter.api.Test;
 
 import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import static de.snailshell.imageio.ImageAsserts.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GEMImageReaderTest {
@@ -16,14 +16,16 @@ public class GEMImageReaderTest {
 
         // Given
 
-        File gemImageFile = new File("src/test/resources/images/tiger.img");
+        var gemImageFile = new File("src/test/resources/images/original/tiger.img");
+        var expected = ImageIO.read(new File("src/test/resources/images/expected/tiger.png"));
 
         // When
 
-        BufferedImage gemImage = ImageIO.read(gemImageFile);
+        var gemImage = ImageIO.read(gemImageFile);
 
         // Then
 
         assertNotNull(gemImage);
+        assertEquals(expected, gemImage);
     }
 }
