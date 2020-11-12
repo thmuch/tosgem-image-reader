@@ -1,7 +1,10 @@
 # Atari TOS/GEM Image Reader
 
-This is a small fun project a) to preserve my very first (IIRC) two [Java applets](https://snailshell.de/java.html)
-from 1996 and b) to provide a means to preserve images in some really old file formats for the future.
+This is a small Java library with ImageIO plugins (readers) for some really old Atari TOS/GEM image
+file formats. And of course it is a fun project to preserve my very first (IIRC) two
+[Java applets](https://snailshell.de/java.html) from 1996, buried somewhere in the
+[Git history](https://github.com/thmuch/tosgem-image-reader/tree/1996-08) :-)
+
 
 ## Supported image formats
 
@@ -11,5 +14,14 @@ from 1996 and b) to provide a means to preserve images in some really old file f
 ## TODO
 
 - Import b/w PSC images. **P**aint **S**hop **C**ompressed was the native image format of my TOS
-  application "PaintShop+" that I wrote around 1991.
-- Convert the applets to ImageIO readers
+  application "PaintShop" that I wrote around 1991.
+- The algorithms in `GEMImageDecoder` and `GEMPictureDecoder` certainly need some refactoring.
+  But for the time being, I kept the structures close to their originals from 1996.
+- Reader for STAD PAC images
+- GitHub Actions pipeline & deployment to Maven Central
+
+## Credits
+
+- "tiger.img" apparently belongs to the public domain, so thank you whoever created that picture!
+- "poster.pic" was drawn by my cousin Sebastian Mayer with an early version of my TOS application "PaintShop"
+  (and exported as a GEM PIC file afterwards).
