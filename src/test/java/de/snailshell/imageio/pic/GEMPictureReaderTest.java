@@ -3,12 +3,10 @@ package de.snailshell.imageio.pic;
 import org.junit.jupiter.api.Test;
 
 import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static de.snailshell.imageio.ImageAsserts.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GEMPictureReaderTest {
@@ -29,16 +27,5 @@ public class GEMPictureReaderTest {
 
         assertNotNull(gemPicture);
         assertEquals(expected, gemPicture);
-    }
-
-    private void assertEquals(BufferedImage expected, BufferedImage actual) throws IOException {
-
-        var expectedBytes = new ByteArrayOutputStream();
-        var actualBytes = new ByteArrayOutputStream();
-
-        ImageIO.write(expected, "png", expectedBytes);
-        ImageIO.write(actual, "png", actualBytes);
-
-        assertArrayEquals(expectedBytes.toByteArray(), actualBytes.toByteArray());
     }
 }
