@@ -8,22 +8,26 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
 
 ## Supported image formats
 
-- Monochrome GEM images (file extension \*.IMG)
-- Monochrome GEM 32000 bytes 640x400 images (file extension \*.PIC or \*.DOO).
+- Monochrome GEM images (["GEM Raster"](http://fileformats.archiveteam.org/wiki/GEM_Raster),
+  file extension \*.IMG)
+- Monochrome GEM 32000 bytes 640x400 images (["Doodle"](http://fileformats.archiveteam.org/wiki/Doodle_(Atari)),
+  file extension \*.PIC or \*.DOO).
 
 ## TODO
 
-- Import b/w PSC images. **P**aint **S**hop **C**ompressed was the native image format of my TOS
-  application "PaintShop" that I wrote around 1991.
+- Import b/w [PSC](http://fileformats.archiveteam.org/wiki/PaintShop_(Atari_ST)) images.
+  **P**aint **S**hop **C**ompressed was the native image format of my TOS application "PaintShop"
+  that I wrote around 1991.
 - The algorithms in `GEMImage` and `GEMPicture` certainly need some refactoring. But for the time being,
   I kept the structures close to their originals from 1996.
-- Reader for STAD PAC images
+- Reader for [STAD "PAC"](http://fileformats.archiveteam.org/wiki/STAD_PAC) images
 - GitHub Actions pipeline & deployment to Maven Central
 
 ## Credits
 
 - "tiger.img" apparently belongs to the public domain, so thank you whoever created that picture!
-- "poster.pic" was drawn by my cousin Sebastian Mayer with an early version of my TOS application "PaintShop"
-  (and exported as a GEM PIC file afterwards).
+- "poster.pic" was drawn by my cousin Sebastian Mayer with an early version of my TOS application
+  ["PaintShop"](https://www.atariuptodate.de/en/675/paintshop-plus) (and exported as a GEM PIC file
+  afterwards).
 
 !["That's it"](src/test/resources/images/expected/poster.png)
