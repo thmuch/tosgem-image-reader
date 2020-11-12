@@ -17,12 +17,12 @@ public class GEMPictureReader extends MonochromeReader {
     }
 
     @Override
-    public int getWidth(int imageIndex) throws IOException {
+    public int getWidth(int imageIndex) {
         return GEMPicture.WIDTH;
     }
 
     @Override
-    public int getHeight(int imageIndex) throws IOException {
+    public int getHeight(int imageIndex) {
         return GEMPicture.HEIGHT;
     }
 

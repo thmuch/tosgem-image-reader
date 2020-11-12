@@ -5,7 +5,6 @@ import javax.imageio.ImageTypeSpecifier;
 import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.spi.ImageReaderSpi;
 import java.awt.image.DataBuffer;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,12 +15,12 @@ public abstract class MonochromeReader extends ImageReader {
     }
 
     @Override
-    public int getNumImages(boolean allowSearch) throws IOException {
+    public int getNumImages(boolean allowSearch) {
         return 1;
     }
 
     @Override
-    public Iterator<ImageTypeSpecifier> getImageTypes(int imageIndex) throws IOException {
+    public Iterator<ImageTypeSpecifier> getImageTypes(int imageIndex) {
 
         var monochrome = ImageTypeSpecifier.createGrayscale(1, DataBuffer.TYPE_BYTE, false);
 
@@ -29,12 +28,12 @@ public abstract class MonochromeReader extends ImageReader {
     }
 
     @Override
-    public IIOMetadata getStreamMetadata() throws IOException {
+    public IIOMetadata getStreamMetadata() {
         return null;
     }
 
     @Override
-    public IIOMetadata getImageMetadata(int imageIndex) throws IOException {
+    public IIOMetadata getImageMetadata(int imageIndex) {
         return null;
     }
 }
