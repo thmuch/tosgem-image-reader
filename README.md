@@ -11,17 +11,18 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
 - Monochrome GEM images (["GEM Raster"](http://fileformats.archiveteam.org/wiki/GEM_Raster),
   file extension \*.IMG)
 - Monochrome GEM 32000 bytes 640x400 images (["Doodle"](http://fileformats.archiveteam.org/wiki/Doodle_(Atari)),
-  file extension \*.PIC or \*.DOO).
+  file extension \*.PIC or \*.DOO)
+- Monochrome [**P**aint **S**hop **C**ompressed](http://fileformats.archiveteam.org/wiki/PaintShop_(Atari_ST))
+  images (file extension \*.PSC). PSC was the native image format of my TOS application "PaintShop"
+  that I wrote 1989-1991.
+
 
 ## TODO
 
-- Import b/w [PSC](http://fileformats.archiveteam.org/wiki/PaintShop_(Atari_ST)) images.
-  **P**aint **S**hop **C**ompressed was the native image format of my TOS application "PaintShop"
-  that I wrote around 1991.
 - The algorithms in `GEMImage` and `GEMPicture` certainly need some refactoring. But for the time being,
   I kept the structures close to their originals from 1996.
 - Reader for [STAD "PAC"](http://fileformats.archiveteam.org/wiki/STAD_PAC) images
-- GitHub Actions pipeline & deployment to Maven Central
+
 
 ## Credits
 
