@@ -51,9 +51,18 @@ public class PSCompressed extends MonochromeDecoder {
                     pscImage.repeatLastLine(count + 256);
                 }
 
-                case 99 ->
-                        // TODO: read uncompressed PSCs (like PIC)
-                        throw new IIOException("Cannot read uncompressed PSCs yet");
+                case 99 -> {
+                    int linePattern[] = new int[dataBytesPerLine];
+
+                    for (int y = 0; y < height; y++) {
+
+                        for (int i = 0; i < dataBytesPerLine; i++) {
+                            linePattern[i] = inputStream.read();
+                        }
+
+                        pscImage.addPatternLine(linePattern);
+                    }
+                }
 
                 case 100 -> {
                     int bytePattern[] = new int[]{inputStream.read()};

@@ -35,7 +35,7 @@ public class PSCompressedReaderTest {
         // Given
 
         var pscFile = new File("src/test/resources/images/original/titlbild.psc");
-        var expected = ImageIO.read(new File("src/test/resources/images/expected/poster.png"));
+        var expected = ImageIO.read(new File("src/test/resources/images/expected/titlbild.png"));
 
         // When
 
