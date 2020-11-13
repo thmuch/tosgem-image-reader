@@ -22,6 +22,21 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
 - The algorithms in `GEMImage` and `GEMPicture` certainly need some refactoring. But for the time being,
   I kept the structures close to their originals from 1996.
 - Reader for [STAD "PAC"](http://fileformats.archiveteam.org/wiki/STAD_PAC) images
+- Maybe a writer (encoder) for PSC images?
+
+
+## Getting Started
+
+- The (integrated) [tests](src/test/java/de/snailshell/imageio/) offer an overview of how to use
+  the new readers via ImageIO API.
+- The reader (decoder) implementations offer a deep dive into the algorithms for
+  [IMG](src/main/java/de/snailshell/imageio/img/GEMImage.java),
+  [PIC](src/main/java/de/snailshell/imageio/pic/GEMPicture.java) and
+  [PSC](src/main/java/de/snailshell/imageio/psc/PSCompressed.java).
+- A good starting point for ImageIO integration is the
+  [services SPI file](src/main/resources/META-INF/services/javax.imageio.spi.ImageReaderSpi).
+- This project uses Java 15 (including some of the new syntax features). But backporting the code
+  to older Java versions should not be that difficult.
 
 
 ## Credits
