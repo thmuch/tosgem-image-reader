@@ -6,9 +6,6 @@ import java.awt.image.MemoryImageSource;
 
 public abstract class MonochromeDecoder {
 
-    public static final int BLACK = 0xff000000;
-    public static final int WHITE = 0xffffffff;
-
     protected BufferedImage bufferedImageFrom(int width, int height, int[] pix) {
         return bufferedImageFrom(width, height, width, height, pix);
     }

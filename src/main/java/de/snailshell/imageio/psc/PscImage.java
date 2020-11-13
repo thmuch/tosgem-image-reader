@@ -1,6 +1,6 @@
 package de.snailshell.imageio.psc;
 
-import de.snailshell.imageio.MonochromeDecoder;
+import de.snailshell.imageio.PixelValue;
 
 import java.util.Arrays;
 
@@ -21,11 +21,11 @@ class PscImage {
     }
 
     public void addWhiteLine() {
-        addLine(MonochromeDecoder.WHITE);
+        addLine(PixelValue.WHITE);
     }
 
     public void addBlackLine() {
-        addLine(MonochromeDecoder.BLACK);
+        addLine(PixelValue.BLACK);
     }
 
     private void addLine(int pixelValue) {
@@ -51,9 +51,9 @@ class PscImage {
         for (int x = 0; x < width; x++) {
 
             if ((patternByte & mask) > 0) {
-                pixels[offset] = MonochromeDecoder.BLACK;
+                pixels[offset] = PixelValue.BLACK;
             } else {
-                pixels[offset] = MonochromeDecoder.WHITE;
+                pixels[offset] = PixelValue.WHITE;
             }
 
             incOffset(1);
