@@ -28,4 +28,22 @@ public class PSCompressedReaderTest {
         assertNotNull(psc);
         assertEquals(expected, psc);
     }
+
+    @Test
+    void reads_uncompressed_PSC_image() throws IOException {
+
+        // Given
+
+        var pscFile = new File("src/test/resources/images/original/titlbild.psc");
+        var expected = ImageIO.read(new File("src/test/resources/images/expected/poster.png"));
+
+        // When
+
+        var psc = ImageIO.read(pscFile);
+
+        // Then
+
+        assertNotNull(psc);
+        assertEquals(expected, psc);
+    }
 }
