@@ -1,6 +1,7 @@
 package de.snailshell.imageio.pic;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -11,13 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GEMPictureReaderTest {
 
-    @Test
-    void reads_monochrome_GEM_picture() throws IOException {
+    @ParameterizedTest
+    @ValueSource(strings = {"poster", "shuttle"})
+    void reads_monochrome_GEM_picture(String imageName) throws IOException {
 
         // Given
 
-        var gemPictureFile = new File("src/test/resources/images/original/poster.pic");
-        var expected = ImageIO.read(new File("src/test/resources/images/expected/poster.png"));
+        var gemPictureFile = new File("src/test/resources/images/original/pic/" + imageName + ".pic");
+        var expected = ImageIO.read(new File("src/test/resources/images/expected/" + imageName + ".png"));
 
         // When
 
