@@ -1,3 +1,4 @@
 de.snailshell.imageio.pic.GEMPictureReaderSpi
 de.snailshell.imageio.img.GEMImageReaderSpi
 de.snailshell.imageio.psc.PSCompressedReaderSpi
+de.snailshell.imageio.pac.PacReaderSpi
