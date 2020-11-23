@@ -18,6 +18,22 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
   that I wrote 1989-1991. The file format is documented in detail [here](docs/PaintShopCompressed.md).
 
 
+## Command Line Interface (CLI)
+
+The library offers a very simple command line interface to convert an input file into a destination format:
+
+`java -jar tosgem-image-reader.jar <output-format> <input-file>`
+
+For example:
+
+`java -jar tosgem-image-reader.jar png poster.psc`
+
+If you don't have any additional ImageIO writers on the classpath, the possible standard output formats are
+`bmp`, `gif`, `jpg`, `png` and `tif`.
+
+The converted image file is created in the same folder as the input file.
+
+
 ## TODO
 
 - The algorithms in `GEMImage` and `GEMPicture` certainly need some refactoring. But for the time being,
