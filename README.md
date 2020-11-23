@@ -12,6 +12,7 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
   file extension \*.IMG)
 - Monochrome GEM 32000 bytes 640x400 images (["Doodle"](http://fileformats.archiveteam.org/wiki/Doodle_(Atari)),
   file extension \*.PIC or \*.DOO)
+- Monochrome [STAD-PAC](http://fileformats.archiveteam.org/wiki/STAD_PAC) images (file extension \*.PAC)
 - Monochrome [**P**aint**S**hop **C**ompressed](http://fileformats.archiveteam.org/wiki/PaintShop_(Atari_ST))
   images (file extension \*.PSC). PSC was the native image format of my TOS application "PaintShop"
   that I wrote 1989-1991. The file format is documented in detail [here](docs/PaintShopCompressed.md).
@@ -21,8 +22,6 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
 
 - The algorithms in `GEMImage` and `GEMPicture` certainly need some refactoring. But for the time being,
   I kept the structures close to their originals from 1996.
-- Reader for [STAD "PAC"](http://fileformats.archiveteam.org/wiki/STAD_PAC) images
-- Maybe a writer (encoder) for PSC images?
 
 
 ## Getting Started
@@ -47,3 +46,5 @@ file formats. And of course it is a fun project to preserve my very first (IIRC)
   (and exported as a GEM PIC file afterwards).
 
 !["That's it"](src/test/resources/images/expected/poster.png)
+
+!["PaintShop"](src/test/resources/images/expected/bemassng.png)
